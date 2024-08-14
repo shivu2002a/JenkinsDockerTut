@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        PATH = "C:/Users/e039325/Downloads/Softwares/apache-maven-3.9.8-bin/apache-maven-3.9.8/bin;${env.PATH}"
+        PATH = "C:/Users/e039326/Downloads/Softwares/apache-maven-3.9.8-bin/apache-maven-3.9.8/bin;${env.PATH}"
     }
     stages {
         stage('Clone') {
@@ -9,7 +9,7 @@ pipeline {
                 checkout([
                     $class: 'GitSCM',
                     branches: [[name: '*/main']],
-                    userRemoteConfigs: [[url: 'https://github.com/NandanVasistaBH/mavenJenkinsDocker.git']]
+                    userRemoteConfigs: [[url: 'https://github.com/shivu2002a/JenkinsDockerTut.git']]
                 ])
             }
         }
